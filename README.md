@@ -47,4 +47,4 @@ API Resources
 -----------------
 
 * [Hosts](https://github.com/teamgovms/api/blob/HOSTS.md)
-* [Webhook](https://github.com/teamgovms/api/blob/WEBHOOK.md)
+* [Webhook](https://github.com/teamgovms/api/blob/master/blob/WEBHOOK.md)
