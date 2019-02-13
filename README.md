@@ -46,5 +46,5 @@ All dates and times are expected to be in UTC.
 API Resources
 -----------------
 
-* [Hosts](https://github.com/teamgovms/api/blob/HOSTS.md)
 * [Webhook](https://github.com/teamgovms/api/blob/master/blob/WEBHOOK.md)
+* [Invites](https://github.com/teamgovms/api/blob/master/blob/INVITES.md)
