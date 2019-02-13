@@ -165,7 +165,7 @@ Update Invite
 ------------
 
 **Resources**
-* ```PUT /invites/:id``` create an invite
+* ```PUT /invites/:id``` update an invite
 
 **Example Request**
 ```shell
@@ -231,7 +231,7 @@ Delete Invite
 ------------
 
 **Resources**
-* ```DELETE /invites/:id``` create an invite
+* ```DELETE /invites/:id``` delete an invite
 
 **Example Request**
 ```shell
