@@ -1,6 +1,6 @@
 Invites
 ============
-Invites and method to pre-register visitors into Teamgo
+Invites is a way to pre-register visitors in Teamgo
 
 * [Get an Invite](#get-invite "This will return a specific invite.")
 * [Create Invite](#create-invite "Create an invite with attendees.")
