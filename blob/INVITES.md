@@ -31,7 +31,7 @@ curl https://api.teamgo.co/authenticate \
         "token": "IudJ3HXTKS8Az+geK40UyIYJleQ1YwJ9KmYj1Xqt3rh84kjPBIe2+9dSVcn9FYtRdxzZ7DeASrEb4Fxv0BeigMJzTCcZTDB4MjVmPMxW/NuULBUWrSQMnR+uiP+TUK9Zxd5+B/SvJlD2YcPf86OVacVE5QQOBRXG6OOTzs17DF5ROmHUlghR30IrqZfcUb1uBkDu2+nuaQ9LC8Fp1j0jEIoakbzNB8u122/p85D45OdZO100a+1zDziv+50AtTLBmRym7/oxdWV2Lb54z20UuAKrf3JE8DxvhL+N",
         "company": {
             "id": 10714518,
-            "name": "thuan sub5"
+            "name": "Company Name"
         }
     }
 }
