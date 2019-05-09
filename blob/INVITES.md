@@ -2,12 +2,40 @@ Invites
 ============
 Invites is a way to pre-register visitors in Teamgo
 
+* [Get an Token](#get-token "This will return a token for access to invite.")
 * [Get an Invite](#get-invite "This will return a specific invite.")
 * [Create Invite](#create-invite "Create an invite with attendees.")
 * [Update Invite](#update-invite "This will update a specific invite.")
 * [Delete Invite](#delete-invite "This will delete a specific invite.")
 
+Get Token
+------------
 
+**Resources**
+* ```GET /authenticate``` get a token
+
+**Example Request**
+```shell
+curl https://api.teamgo.co/authenticate \
+  -H Authorization API_KEY: \
+  -H 'Accept: application/json' \
+```
+
+**Example Response**
+```json
+{
+    "status": "OK",
+    "code": 200,
+    "messages": "authentication.SUCCESSFUL_AUTHENTICATION",
+    "data": {
+        "token": "IudJ3HXTKS8Az+geK40UyIYJleQ1YwJ9KmYj1Xqt3rh84kjPBIe2+9dSVcn9FYtRdxzZ7DeASrEb4Fxv0BeigMJzTCcZTDB4MjVmPMxW/NuULBUWrSQMnR+uiP+TUK9Zxd5+B/SvJlD2YcPf86OVacVE5QQOBRXG6OOTzs17DF5ROmHUlghR30IrqZfcUb1uBkDu2+nuaQ9LC8Fp1j0jEIoakbzNB8u122/p85D45OdZO100a+1zDziv+50AtTLBmRym7/oxdWV2Lb54z20UuAKrf3JE8DxvhL+N",
+        "company": {
+            "id": 10714518,
+            "name": "thuan sub5"
+        }
+    }
+}
+```
 Get Invite
 ------------
 
@@ -17,7 +45,7 @@ Get Invite
 **Example Request**
 ```shell
 curl https://api.teamgo.co/v1/invite/1 \
-  -u API_KEY: \
+  -H Authorization Bearer TOKEN: \
   -H 'Accept: application/json' \
   -H 'User-Agent: APP_VENDOR_NAME (APP_VENDOR_EMAIL)'
 ```
@@ -97,7 +125,7 @@ Create Invite
 **Example Request**
 ```shell
 curl https://api.teamgo.co/v1/invite \
- -u API_KEY: \
+ -H Authorization Bearer TOKEN: \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -H 'User-Agent: APP_VENDOR_NAME (APP_VENDOR_EMAIL)' \
@@ -170,7 +198,7 @@ Update Invite
 **Example Request**
 ```shell
 curl https://api.teamgo.co/v1/invite/1 \
- -u API_KEY: \
+ -H Authorization Bearer TOKEN: \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -H 'User-Agent: APP_VENDOR_NAME (APP_VENDOR_EMAIL)' \
@@ -236,7 +264,7 @@ Delete Invite
 **Example Request**
 ```shell
 curl https://api.teamgo.co/v1/invite/1 \
- -u API_KEY: \
+ -H Authorization Bearer TOKEN: \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -H 'User-Agent: APP_VENDOR_NAME (APP_VENDOR_EMAIL)' \
