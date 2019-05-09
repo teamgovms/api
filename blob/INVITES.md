@@ -138,7 +138,11 @@ curl https://api.teamgo.co/v1/invite \
      "send_reminder":true, "send_qrcode": true,
       "custom_fields": [{"Room number": 11}, {"Guest type": "VIP"}}]
      ],
-    "hosts": [{"email": "john@company.com"}]
+    "hosts": [{"email": "john@company.com"}],
+    "location": {
+    "name":"Adelaide Head Office",
+    "address":"Level 2, 44 Pirie Strett, Adelaide, SA 5000"
+  },
     }' \
   -X POST
 ```
