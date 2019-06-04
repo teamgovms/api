@@ -16,7 +16,7 @@ Get Token
 
 **Example Request**
 ```shell
-curl https://api.teamgo.co/authenticate \
+curl https://api.teamgo.co/v1/authenticate \
   -H Authorization API_KEY: \
   -H 'Accept: application/json' \
 ```
@@ -44,7 +44,7 @@ Get Invite
 
 **Example Request**
 ```shell
-curl https://api.teamgo.co/v1/invite/1 \
+curl https://api.teamgo.co/v1/invites/1 \
   -H Authorization Bearer TOKEN: \
   -H 'Accept: application/json' \
   -H 'User-Agent: APP_VENDOR_NAME (APP_VENDOR_EMAIL)'
@@ -124,7 +124,7 @@ Create Invite
 
 **Example Request**
 ```shell
-curl https://api.teamgo.co/v1/invite \
+curl https://api.teamgo.co/v1/invites \
  -H Authorization Bearer TOKEN: \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -201,7 +201,7 @@ Update Invite
 
 **Example Request**
 ```shell
-curl https://api.teamgo.co/v1/invite/1 \
+curl https://api.teamgo.co/v1/invites/1 \
  -H Authorization Bearer TOKEN: \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
