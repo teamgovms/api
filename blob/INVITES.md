@@ -3,6 +3,7 @@ Invites
 Invites is a way to pre-register visitors in Teamgo
 
 * [Get an Token](#get-token "This will return a token for access to invite.")
+* [Get all Invites](#get-all-invite "This will return all invites.")
 * [Get an Invite](#get-invite "This will return a specific invite.")
 * [Create Invite](#create-invite "Create an invite with attendees.")
 * [Update Invite](#update-invite "This will update a specific invite.")
@@ -36,6 +37,132 @@ curl https://api.teamgo.co/v1/authenticate \
     }
 }
 ```
+
+Get All Invites
+------------
+
+**Resources**
+* ```GET /invites``` get all bookings
+
+**Example Request**
+```shell
+curl https://api.teamgo.co/v1/invites?page=1&sort_by=date&order=desc \
+  -H Authorization Bearer TOKEN: \
+  -H 'Accept: application/json' \
+  -H 'User-Agent: APP_VENDOR_NAME (APP_VENDOR_EMAIL)'
+```
+
+**Example Response**
+```json
+"data": {
+        "pagination": {
+            "page_number": 1,
+            "page_size": 10,
+            "page_count": 6
+        },
+        "invites": [
+          {
+            "id": 1,
+            "created_at": "2019-05-13T14:23:16Z",
+            "updated_at": "2019-05-14T14:26:13Z",
+            "start": "2019-06-10T12:00:00Z",
+            "end": "2019-06-10T13:00:00Z",
+            "title": "Sales meeting",
+            "checkin": "2019-06-10T13:00:00Z",
+            "checkout": null,
+            "send_reminder":true,
+            "send_qrcode": true,
+            "send_preregistration": false,
+            "location": {
+              "name":"Adelaide Head Office",
+              "address":"Level 2, 44 Pirie Strett, Adelaide, SA 5000"
+            },
+            "attendees": [
+                {"uid":123,
+                  "first_name":"John",
+                  "last_name":"Smith",
+                  "email":"john@example.com",
+                  "mobile":"+6104312345678",
+                  "language":"EN",
+                  "custom_fields": [
+                      {"Would you like coffee": "No"},
+                      {"Room number": 11},
+                      {"Guest type": "VIP"}
+                   ]
+                },
+                {"uid":124,
+                  "first_name":"Jane",
+                  "last_name":"Smith",
+                  "email":"jane@example.com",
+                  "mobile":"+6104312345679",
+                  "language":"EN",
+                  "custom_fields": [
+                      {"Would you like coffee": "Yes"},
+                      {"Room number": 11},
+                      {"Guest Type": "VIP"}
+                   ]
+                }
+            ],
+            "hosts": [
+                {"uid":123,
+                  "first_name":"John",
+                  "last_name":"Smith",
+                  "email":"john@example.com",
+                  "mobile":"+6104312345678"
+                },
+                {"uid":124,
+                  "first_name":"Jane",
+                  "last_name":"Smith",
+                  "email":"jane@example.com",
+                  "mobile":"+6104312345679"
+                }
+            ],
+            "notes": "Please bring drinks",
+            "status" "Active|Checked-In|Checked-Out|Not Coming"
+        },
+        {
+            "id": 2,
+            "created_at": "2019-05-10T14:23:16Z",
+            "updated_at": "2019-05-11T14:26:13Z",
+            "start": "2019-06-08T12:00:00Z",
+            "end": "2019-06-09T13:00:00Z",
+            "title": "Tech meeting",
+            "checkin": "2019-06-10T13:00:00Z",
+            "checkout": null,
+            "send_reminder":true,
+            "send_qrcode": true,
+            "send_preregistration": false,
+            "location": {
+              "name":"Adelaide Head Office",
+              "address":"Level 2, 44 Pirie Strett, Adelaide, SA 5000"
+            },
+            "attendees": [
+                {"uid":123,
+                  "first_name":"John",
+                  "last_name":"Smith",
+                  "email":"john@example.com",
+                  "mobile":"+6104312345678",
+                  "language":"EN",
+                  "custom_fields": [
+                      {"Would you like coffee": "No"},
+                      {"Room number": 12},
+                      {"Guest type": "VIP"}
+                   ]
+                }
+            ],
+            "hosts": [
+                {"uid":123,
+                  "first_name":"John",
+                  "last_name":"Smith",
+                  "email":"john@example.com",
+                  "mobile":"+6104312345678"
+                }
+            ]
+        }
+     ]
+}
+```
+
 Get Invite
 ------------
 
@@ -120,11 +247,11 @@ Create Invite
 ------------
 
 **Resources**
-* ```POST /invites``` create an invite
+* ```POST /invites/create``` create an invite
 
 **Example Request**
 ```shell
-curl https://api.teamgo.co/v1/invites \
+curl https://api.teamgo.co/v1/invites/create \
  -H Authorization Bearer TOKEN: \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
